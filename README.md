@@ -4,7 +4,8 @@
 - [Introduction](#introduction)
 - [Authentication](#authentication)
 - [Making Requests](#making-requests)
-
+- [Parameters](#parameters)
+  
 ## Introduction
 
 Site Unblocker is a powerful scraping solution with automatic proxy pool management and automated unblocking capabilities that enable you to access any website with even the most sophisticated anti-bot system.
@@ -20,6 +21,14 @@ Once you have an active Site Unblocker subscription, you can try sending a reque
 You may also click on the Advanced Parameters tab to access all available parameters for your request, such as custom cookies, custom headers and a JavaScript rendering toggle.
 
 ## Making Requests
+
+**``` -k ``` or the equivalent ```--insecure```  is required for Site Unblocker to work**
+
+```
+curl -k -v -x unblock.smartproxy.com:60000 \
+-U "USERNAME:PASSWORD" "https://ip.smartproxy.com/" 
+```
+
 
 ## Parameters
 
