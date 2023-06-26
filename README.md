@@ -84,7 +84,7 @@ curl -k -v -x unblock.smartproxy.com:60000 \
 ```
 ### Headers
 
-You may send additional headers with your request, they could be standard like ```User-Agent``` or custom ones depending on your specific target.
+You may send additional headers with your request, they could be standard like ```User-Agent``` or custom ones depending on your specific target. Use ```X-Smartproxy-Custom-*``` to send a custom header, it can be named as desired e.g - ```X-Smartproxy-Custom-My-Header```
 
 ```
 curl -k -v -x unblock.smartproxy.com:60000 \
