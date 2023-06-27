@@ -37,12 +37,12 @@ Additional parameters are sent as headers when making a request.
 ### Session
 
 
-To utilize a single proxy for multiple requests, simply include the ```X-Smartproxy-Session-Id``` header with a randomly generated string as the session ID. This ID will be associated with a unique proxy, which will be used for all subsequent requests within a 10-minute timeframe. Once the 10 minutes have elapsed, a new proxy will be assigned to that specific session ID.
+To utilize a single proxy for multiple requests, simply include the ```X-SU-Session-Id``` header with a randomly generated string as the session ID. This ID will be associated with a unique proxy, which will be used for all subsequent requests within a 10-minute timeframe. Once the 10 minutes have elapsed, a new proxy will be assigned to that specific session ID.
 
 ```
 curl -k -v -x unblock.smartproxy.com:60000 \
 -U "USERNAME:PASSWORD" "https://ip.smartproxy.com/" \
--H "X-Smartproxy-Session-Id: random123"
+-H "X-SU-Session-Id: random123"
 ```
 
 ### Geo-location
@@ -54,7 +54,7 @@ You may specify your geolocation when making request to a particular website. Th
 ```
 curl -k -v -x unblock.smartproxy.com:60000 \
 -U "USERNAME:PASSWORD" "https://ip.smartproxy.com/" \
--H "X-Smartproxy-Geo: Germany"
+-H "X-SU-Geo: Germany"
 ```
 
 **City**
@@ -62,7 +62,7 @@ curl -k -v -x unblock.smartproxy.com:60000 \
 ```
 curl -k -v -x unblock.smartproxy.com:60000 \
 -U "USERNAME:PASSWORD" "https://ip.smartproxy.com/" \
--H "X-Smartproxy-Geo: Berlin, Germany"
+-H "X-SU-Geo: Berlin, Germany"
 ```
 
 **State**
@@ -70,7 +70,7 @@ curl -k -v -x unblock.smartproxy.com:60000 \
 ```
 curl -k -v -x unblock.smartproxy.com:60000 \
 -U "USERNAME:PASSWORD" "https://ip.smartproxy.com/" \
--H "X-Smartproxy-Geo: Arizona, United States"
+-H "X-SU-Geo: Arizona, United States"
 ```
 
 **Coordinates & Radius**
@@ -80,16 +80,16 @@ The following example uses coordinates for The Bronx, New York City, USA.
 ```
 curl -k -v -x unblock.smartproxy.com:60000 \
 -U "USERNAME:PASSWORD" "https://ip.smartproxy.com/" \
--H "X-Smartproxy-Geo: lat: 40.8448, lng: -73.8654, rad: 20000"
+-H "X-SU-Geo: lat: 40.8448, lng: -73.8654, rad: 20000"
 ```
 ### Headers
 
-You may send additional headers with your request, they could be standard like ```User-Agent``` or custom ones depending on your specific target. Use ```X-Smartproxy-Custom-*``` to send a custom header, it can be named as desired e.g - ```X-Smartproxy-Custom-My-Header```
+You may send additional headers with your request, they could be standard like ```User-Agent``` or custom ones depending on your specific target. Use ```X-SU-Custom-*``` to send a custom header, it can be named as desired e.g - ```X-SU-Custom-My-Header```
 
 ```
 curl -k -v -x unblock.smartproxy.com:60000 \
 -U "USERNAME:PASSWORD" "https://ip.smartproxy.com/" \
--H "X-Smartproxy-Custom-My-Header: Custom header content here" \
+-H "X-SU-Custom-My-Header: Custom header content here" \
 -H "User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.79 Safari/537.36" 
 ```
 
@@ -110,7 +110,7 @@ A request is considered to be successful if it returns a status code in the 2xx 
 ```
 curl -k -v -x unblock.smartproxy.com:60000 \
 -U "USERNAME:PASSWORD" "https://ip.smartproxy.com/" \
--H "X-Smartproxy-Status-Code: 503, 501"
+-H "X-SU-Status-Code: 503, 501"
 ```
 
 ### POST Requests
@@ -134,7 +134,7 @@ If the page you intend to scrape necessitates the execution of JavaScript in ord
 ```
 curl -k -v -x unblock.smartproxy.com:60000 \
 -U "USERNAME:PASSWORD" "https://ip.smartproxy.com/" \
--H "X-Smartproxy-Headless: html"
+-H "X-SU-Headless: html"
 ```
 
 **Receive rendered page content as PNG**
@@ -144,6 +144,6 @@ The response will contain raw bytes of an image that can be saved in PNG format.
 ```
 curl -k -v -x unblock.smartproxy.com:60000 \
 -U "USERNAME:PASSWORD" "https://ip.smartproxy.com/" \
--H "X-Smartproxy-Headless: png"
+-H "X-SU-Headless: png"
 ```
 
