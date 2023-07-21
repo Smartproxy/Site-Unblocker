@@ -47,7 +47,7 @@ curl -k -v -x unblock.smartproxy.com:60000 \
 
 ### Geo-location
 
-You may specify your geolocation when making request to a particular website. The accepted geolocation values can be country, state, city or coordinates, and radius. 
+You may specify your geolocation when making request to a particular website. The accepted geolocation values can be country, state, city or coordinates and radius for Google, ZIP Code & Country for Amazon and Country name for other websites.
 
 **Country**
 
