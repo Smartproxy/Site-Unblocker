@@ -8,7 +8,7 @@
   
 ## Introduction
 
-[Site Unblocker] (https://smartproxy.com/proxies/site-unblocker) is a powerful scraping solution with automatic proxy pool management and automated unblocking capabilities that enable you to access any website with even the most sophisticated anti-bot system.
+[Site Unblocker](https://smartproxy.com/proxies/site-unblocker) is a powerful scraping solution with automatic proxy pool management and automated unblocking capabilities that enable you to access any website with even the most sophisticated anti-bot system.
 
 It bypasses CAPTCHAs, geo-blocking, IP blocking, and other challenges to fetch raw HTML with JavaScript data.
 
